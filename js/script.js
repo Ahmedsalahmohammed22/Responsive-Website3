@@ -15,8 +15,11 @@ window.onscroll = () =>{
     section.forEach(sec =>{
       let top = window.scrollY;
       let height = sec.offsetHeight;
-      let offset = sec.offsetTop - 150;
+      let offset = sec.offsetTop - 200;
       let id = sec.getAttribute('id');
+      console.log(offset);
+      console.log(height);
+      console.log(id);
 
       if(top >= offset && top < offset + height){
         navlinks.forEach(links =>{
@@ -64,6 +67,6 @@ document.querySelector('#close').onclick =() =>{
     document.querySelector('.loader-container').classList.add('fade-out');
   }
   function fadeOut(){
-      setInterval(loader , 3000);
+      setInterval(loader , 1000);
   }
   window.onload = fadeOut;
